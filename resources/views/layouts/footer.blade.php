@@ -81,7 +81,7 @@
                 <div class="col-md-6 col-12">
                     <div class="site-logo-wrap">
                         <div class="site-logo">
-                            <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
+                            <a href="index.html"><img src="{{ asset(App\Models\Header::first()->logo) }}" alt="Logo"></a>
                         </div>
                         <div class="get-support ltn__copyright-design clearfix">
                             <div class="get-support-info">

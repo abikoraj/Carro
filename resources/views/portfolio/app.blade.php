@@ -31,15 +31,6 @@
                     <a href="assets/img/img-slide/12.jpg" data-rel="lightcase:myCollection">
                         <img src="assets/img/img-slide/12.jpg" alt="Image">
                     </a>
-                    {{-- <div class="ltn__img-slide-info">
-                        <div class="ltn__img-slide-info-brief">
-                            <h6>//  trouble shooting</h6>
-                            <h1><a href="portfolio-details.html">Hilix Nova Car Solutions.</a></h1>
-                        </div>
-                        <div class="btn-wrapper">
-                            <a href="portfolio-details.html" class="btn theme-btn-1 btn-effect-1"><i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
             <div class="col-lg-12">
@@ -47,15 +38,6 @@
                     <a href="assets/img/img-slide/13.jpg" data-rel="lightcase:myCollection">
                         <img src="assets/img/img-slide/13.jpg" alt="Image">
                     </a>
-                    {{-- <div class="ltn__img-slide-info">
-                        <div class="ltn__img-slide-info-brief">
-                            <h6>//  trouble shooting</h6>
-                            <h1><a href="portfolio-details.html">Hilix Nova Car Solutions.</a></h1>
-                        </div>
-                        <div class="btn-wrapper">
-                            <a href="portfolio-details.html" class="btn theme-btn-1 btn-effect-1"><i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
             <div class="col-lg-12">
@@ -63,15 +45,6 @@
                     <a href="assets/img/img-slide/11.jpg" data-rel="lightcase:myCollection">
                         <img src="assets/img/img-slide/11.jpg" alt="Image">
                     </a>
-                    {{-- <div class="ltn__img-slide-info">
-                        <div class="ltn__img-slide-info-brief">
-                            <h6>//  trouble shooting</h6>
-                            <h1><a href="portfolio-details.html">Hilix Nova Car Solutions.</a></h1>
-                        </div>
-                        <div class="btn-wrapper">
-                            <a href="portfolio-details.html" class="btn theme-btn-1 btn-effect-1"><i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
             <div class="col-lg-12">
@@ -79,20 +52,11 @@
                     <a href="assets/img/img-slide/13.jpg" data-rel="lightcase:myCollection">
                         <img src="assets/img/img-slide/13.jpg" alt="Image">
                     </a>
-                    {{-- <div class="ltn__img-slide-info">
-                        <div class="ltn__img-slide-info-brief">
-                            <h6>//  trouble shooting</h6>
-                            <h1><a href="portfolio-details.html">Hilix Nova Car Solutions.</a></h1>
-                        </div>
-                        <div class="btn-wrapper">
-                            <a href="portfolio-details.html" class="btn theme-btn-1 btn-effect-1"><i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
         </div>
         <div class="btn-wrapper offset-md-5">
-            <a href="appointment.html" class="btn theme-btn-1 btn-effect-1 text-uppercase mt-4 mb-4">See More  <i class="fas fa-arrow-right"></i></a>
+            <a href="{{ route('portfolio') }}" class="btn theme-btn-3 btn-effect-4 text-uppercase mt-4 mb-4">Load More  <i class="fas fa-arrow-right"></i></a>
         </div>
         <hr>
     </div>

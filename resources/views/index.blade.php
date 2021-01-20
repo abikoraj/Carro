@@ -14,7 +14,7 @@
 
 {{-- @include('sections.teams') --}}
 
-@include('sections.img-slider')
+@include('portfolio.app')
 
 @include('sections.freeService')
 

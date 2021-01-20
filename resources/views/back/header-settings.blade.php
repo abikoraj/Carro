@@ -51,8 +51,7 @@
                                             <label>Address</label>
                                             <div class="input-group masked-input mb-3">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i
-                                                            class="zmdi zmdi-pin"></i></span>
+                                                    <span class="input-group-text"><i class="zmdi zmdi-pin"></i></span>
                                                 </div>
                                                 <input type="text" name="address" class="form-control" value="{{ $item->address }}" placeholder="Ex: 15/A, Nest Tower, NYC">
                                             </div>

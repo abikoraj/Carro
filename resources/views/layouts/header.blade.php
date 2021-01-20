@@ -1,6 +1,5 @@
 <!-- HEADER AREA START (header-5) -->
 <header class="ltn__header-area ltn__header-5 ltn__header-transparent gradient-color-4">
-
     @php
         $item = App\Models\Header::first();
     @endphp
@@ -67,14 +66,14 @@
                                     <li><a href="{{ route('home') }}">Home</a></li>
                                     <li><a href="{{ route('about') }}">About</a></li>
                                     <li><a href="{{ route('service') }}">Service</a></li>
-                                    <li><a href="{{ route('service') }}">Portfolio</a></li>
+                                    <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
                                     <li><a href="{{ route('contact') }}">Contact</a></li>
                                 </ul>
                             </div>
                         </nav>
                     </div>
                 </div>
-                <div class="ltn__header-options ltn__header-options-2">
+                {{-- <div class="ltn__header-options ltn__header-options-2"> --}}
                     <!-- Mobile Menu Button -->
                     <div class="mobile-menu-toggle d-xl-none" style="float: right;">
                         <a href="#ltn__utilize-mobile-menu" class="ltn__utilize-toggle">
@@ -85,7 +84,7 @@
                             </svg>
                         </a>
                     </div>
-                </div>
+                {{-- </div> --}}
             </div>
         </div>
     </div>
@@ -114,38 +113,8 @@
                 <li><a href="{{ route('contact') }}">Home</a></li>
                 <li><a href="{{ route('about') }}">About</a></li>
                 <li><a href="{{ route('service') }}">Service</a></li>
-                <li><a href="{{ route('contact') }}">Portfolio</a></li>
+                <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
                 <li><a href="{{ route('contact') }}">Contact</a></li>
-            </ul>
-        </div>
-        <div class="ltn__utilize-buttons ltn__utilize-buttons-2">
-            <ul>
-                <li>
-                    <a href="account.html" title="My Account">
-                        <span class="utilize-btn-icon">
-                            <i class="far fa-user"></i>
-                        </span>
-                        My Account
-                    </a>
-                </li>
-                <li>
-                    <a href="wishlist.html" title="Wishlist">
-                        <span class="utilize-btn-icon">
-                            <i class="far fa-heart"></i>
-                            <sup>3</sup>
-                        </span>
-                        Wishlist
-                    </a>
-                </li>
-                <li>
-                    <a href="cart.html" title="Shoping Cart">
-                        <span class="utilize-btn-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                            <sup>5</sup>
-                        </span>
-                        Shoping Cart
-                    </a>
-                </li>
             </ul>
         </div>
         <div class="ltn__social-media-2">

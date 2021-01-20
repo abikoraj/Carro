@@ -1,10 +1,10 @@
 <!-- HEADER AREA START (header-4) -->
+@php
+    $item = App\Models\Header::first();
+@endphp
 <header class="ltn__header-area ltn__header-4 ltn__header-transparent gradient-color-2">
     <!-- ltn__header-middle-area start -->
     <div class="ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-black">
-        @php
-        $item = App\Models\Header::first();
-        @endphp
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -31,8 +31,9 @@
                                     <li><a href="{{ route('home') }}">Home</a></li>
                                     <li><a href="{{ route('about') }}">About</a></li>
                                     <li><a href="{{ route('service') }}">Service</a></li>
+                                    <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
                                     <li><a href="{{ route('contact') }}">Contact</a></li>
-                                    <li class="special-link"><a href="appointment.html">GET APPOINTMENT</a></li>
+                                    <li class="special-link"><a href="{{ route('appointment') }}">GET APPOINTMENT</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -64,7 +65,7 @@
     <div class="ltn__utilize-menu-inner ltn__scrollbar">
         <div class="ltn__utilize-menu-head">
             <div class="site-logo">
-                <a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a>
+                <a href="{{ route('home') }}"><img src="{{ asset($item->logo) }}" alt="Logo"></a>
             </div>
             <button class="ltn__utilize-close">×</button>
         </div>
@@ -76,40 +77,11 @@
         </div>
         <div class="ltn__utilize-menu">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <div class="ltn__utilize-buttons ltn__utilize-buttons-2">
-            <ul>
-                <li>
-                    <a href="account.html" title="My Account">
-                        <span class="utilize-btn-icon">
-                            <i class="far fa-user"></i>
-                        </span>
-                        My Account
-                    </a>
-                </li>
-                <li>
-                    <a href="wishlist.html" title="Wishlist">
-                        <span class="utilize-btn-icon">
-                            <i class="far fa-heart"></i>
-                            <sup>3</sup>
-                        </span>
-                        Wishlist
-                    </a>
-                </li>
-                <li>
-                    <a href="cart.html" title="Shoping Cart">
-                        <span class="utilize-btn-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                            <sup>5</sup>
-                        </span>
-                        Shoping Cart
-                    </a>
-                </li>
+                <li><a href="{{ route('home') }}">Home</a></li>
+                <li><a href="{{ route('about') }}">About</a></li>
+                <li><a href="{{ route('service') }}">Service</a></li>
+                <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
+                <li><a href="{{ route('contact') }}">Contact</a></li>
             </ul>
         </div>
         <div class="ltn__social-media-2">

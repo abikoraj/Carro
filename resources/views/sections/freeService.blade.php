@@ -13,7 +13,7 @@
                             <h1 class="section-title">Get A Free Car Service<span>.</span></h1>
                         </div>
                         <div class="btn-wrapper">
-                            <a href="appointment.html" class="btn theme-btn-1 btn-effect-1 text-uppercase">get an appointment</a>
+                            <a href="{{ route('appointment') }}" class="btn theme-btn-1 btn-effect-1 text-uppercase">get an appointment</a>
                         </div>
                     </div>
                     <span class="call-to-circle-1"></span>

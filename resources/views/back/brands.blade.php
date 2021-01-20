@@ -35,9 +35,10 @@
                             <h2>Add<strong> Brands</strong></h2>
                         </div>
                         <div class="body clearfix">
-                            <form action="">
+                            <form action="{{ route('brands.submit') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
                                 <div class="form-group">
-                                    <input type="file" class="dropify">
+                                    <input type="file" name="image" class="dropify">
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary btn-lg float-right">Upload</button>

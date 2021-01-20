@@ -15,7 +15,12 @@
                     </div>
                 </div>
             </li>
-            <li class="active open"><a href="index.html"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+            <li class="active open"><a href="{{ route('dashboard') }}"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+            <li><a href="{{ route('slider.add') }}"><i class="zmdi zmdi-view-carousel"></i><span>Slider</span></a></li>
+            <li class="open"><a href="{{ route('about.add') }}"><i class="zmdi zmdi-nature-people"></i><span>About</span></a></li>
+            <li class="open"><a href="{{ route('portfolio.add') }}"><i class="zmdi zmdi-collection-image-o"></i><span>Portfolio</span></a></li>
+            <li class="open"><a href="{{ route('brands.add') }}"><i class="zmdi zmdi-accounts-list"></i><span>Brands</span></a></li>
+            <li class="open"><a href="{{ route('header.settings') }}"><i class="zmdi zmdi-settings-square"></i><span>Header Settings</span></a></li>
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>App</span></a>
                 <ul class="ml-menu">
                     <li><a href="mail-inbox.html">Email</a></li>
