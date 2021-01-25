@@ -1,4 +1,7 @@
 <!-- ABOUT US AREA START -->
+@php
+    $item = App\Models\About::first();
+@endphp
 <div class="ltn__about-us-area pt-115 pb-95">
     <div class="container">
         <div class="row">
@@ -6,17 +9,17 @@
                 <div class="about-us-info-wrap">
                     <div class="section-title-area ltn__section-title-2">
                         <h6 class="section-subtitle ltn__secondary-color">// About Us</h6>
-                        <h1 class="section-title">Safety Is Our First Priority<span>.</span></h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                        <h1 class="section-title">{{ $item->title }}<span>.</span></h1>
+                        <p>{{ $item->subtitle }}</p>
                     </div>
                     <div class="about-us-info-wrap-inner about-us-info-devide">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                        <p>{{ $item->description }}</p>
                         <div class="list-item-with-icon">
                             <ul>
-                                <li><a href="contact.html">24/7 Online Support</a></li>
-                                <li><a href="team.html">Expert Team</a></li>
-                                <li><a href="service-details.html">Pure Equipment</a></li>
-                                <li><a href="shop.html">Unlimited Product</a></li>
+                                <li><a href="{{ route('service') }}">{{ $item->feature1 }}</a></li>
+                                <li><a href="{{ route('service') }}">{{ $item->feature2 }}</a></li>
+                                <li><a href="{{ route('service') }}">{{ $item->feature3 }}</a></li>
+                                <li><a href="{{ route('service') }}">{{ $item->feature4 }}</a></li>
                             </ul>
                         </div>
                     </div>

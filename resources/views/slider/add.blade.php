@@ -31,8 +31,8 @@
                             @csrf
                             <div class="body row">
                                 <div class="form-group col-md-6">
-                                    <label for="image">Slider Image</label>
-                                    <input type="file" name="image" class="dropify" data-default-file="{{ asset('assets/img/slider/21.png') }}">
+                                        <label for="title">Image</label>
+                                        <input type="file" name="image" class="dropify" data-default-file="{{ asset('assets/img/slider/21.png') }}">
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -44,7 +44,7 @@
                                         <input type="text" name="subtitle" class="form-control form-control-lg" placeholder="Enter Sub-Title">
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary waves-blue">Upload</button>
+                                        <button type="submit" class="btn btn-primary btn-lg waves-blue float-right">Upload</button>
                                     </div>
                                 </div>
                             </div>

@@ -16,7 +16,7 @@ class CoomingSoon
      */
     public function handle(Request $request, Closure $next)
     {
-        if(env('commingsoon',0)==1 || Auth::check()){
+        if(env('commingsoon',0)==1 && !Auth::check()){
             return redirect()->route('commingsoon');
         }
         return $next($request);

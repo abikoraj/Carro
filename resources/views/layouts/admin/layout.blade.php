@@ -17,6 +17,13 @@
 <!-- Custom Css -->
 <link rel="stylesheet" href="{{ asset('assets/backend/css/style.min.css') }}">
 
+<!-- Multi Select Css -->
+<link rel="stylesheet" href="{{ asset('assets/backend/plugins/multi-select/css/multi-select.css') }}">
+<!-- Bootstrap Select Css -->
+<link rel="stylesheet" href="{{ asset('assets/backend/plugins/bootstrap-select/css/bootstrap-select.css') }}" />
+<!-- Select2 -->
+<link rel="stylesheet" href="{{ asset('assets/backend/plugins/select2/select2.css') }}" />
+
 <link rel="stylesheet" href="{{ asset('assets/backend/plugins/dropify/css/dropify.min.css') }}">
 </head>
 
@@ -52,6 +59,9 @@
 
 <script src="{{ asset('assets/backend/plugins/dropify/js/dropify.min.js') }}"></script>
 <script src="{{ asset('assets/backend/js/pages/forms/dropify.js') }}"></script>
+
+<script src="{{ asset('assets/backend/plugins/multi-select/js/jquery.multi-select.js') }}"></script> <!-- Multi Select Plugin Js -->
+<script src="{{ asset('assets/backend/plugins/select2/select2.min.js') }}"></script> <!-- Select2 Js -->
 
 </body>
 

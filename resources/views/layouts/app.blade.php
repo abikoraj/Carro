@@ -57,6 +57,16 @@
     <!-- Main JS -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
+
+    @if(Auth::check())
+        <div title="Go To Dashboard" style="text-align:center;height:50px;width:50px;position:fixed;border-radius:5px;left:10px;bottom:10px;background:rgb(229, 62, 41);color:white ;font-size: 25px;
+        cursor: pointer;
+        z-index: 9999;">
+        <a href="{{ route('dashboard') }}" style="color:white !important">
+            <i class="fas fa-chevron-right"></i>
+        </a>
+        </div>
+    @endif
 </body>
 
 </html>

@@ -22,12 +22,14 @@
         <div class="container-fluid">
             <div class="row clearfix">
                 <div class="col-12">
-                    <div class="alert alert-warning" role="alert">
-                        <strong>dropify</strong> Taken from: <a target="_blank" href="https://github.com/JeremyFagis/dropify">View More</a>
+                    @if (session()->has('message'))
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                        {{ session()->get('message') }}
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
                         </button>
                     </div>
+                    @endif
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="card">
@@ -51,50 +53,16 @@
             <hr>
             <br>
             <div class="row clearfix">
+                @foreach (App\Models\Brand::all() as $item)
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="card ">
                         <div class="body">
-                            <a class="btn btn-danger btn-sm waves-float float-sm-right" ><i class="zmdi zmdi-delete"></i></a>
-                            <img src="{{ asset('assets/img/brand-logo/1.png') }}" alt="">
+                            <a href="{{ route('brands.delete',['brand'=>$item->id]) }}" class="btn btn-danger btn-sm waves-float float-sm-right" ><i class="zmdi zmdi-delete"></i></a>
+                            <img src="{{ asset($item->image) }}" alt="">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card widget_2 big_icon sales">
-                        <div class="body">
-                            <h6>Sales</h6>
-                            <h2>12% <small class="info">of 100</small></h2>
-                            <small>6% higher than last month</small>
-                            <div class="progress">
-                                <div class="progress-bar l-blue" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100" style="width: 38%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card widget_2 big_icon email">
-                        <div class="body">
-                            <h6>Email</h6>
-                            <h2>39 <small class="info">of 100</small></h2>
-                            <small>Total Registered email</small>
-                            <div class="progress">
-                                <div class="progress-bar l-purple" role="progressbar" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100" style="width: 39%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12">
-                    <div class="card widget_2 big_icon domains">
-                        <div class="body">
-                            <h6>Domains</h6>
-                            <h2>8 <small class="info">of 10</small></h2>
-                            <small>Total Registered Domain</small>
-                            <div class="progress">
-                                <div class="progress-bar l-green" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100" style="width: 89%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

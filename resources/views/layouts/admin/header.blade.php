@@ -21,6 +21,8 @@
             <li class="open"><a href="{{ route('portfolio.add') }}"><i class="zmdi zmdi-collection-image-o"></i><span>Portfolio</span></a></li>
             <li class="open"><a href="{{ route('brands.add') }}"><i class="zmdi zmdi-accounts-list"></i><span>Brands</span></a></li>
             <li class="open"><a href="{{ route('header.settings') }}"><i class="zmdi zmdi-settings-square"></i><span>Header Settings</span></a></li>
+            <li class="open"><a href="{{ route('testimonial.add') }}"><i class="zmdi zmdi-comment-alt-text"></i><span>Testimonials</span></a></li>
+            <li class="open"><a href="{{ route('services.add') }}"><i class="zmdi zmdi-group-work"></i><span>Services</span></a></li>
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>App</span></a>
                 <ul class="ml-menu">
                     <li><a href="mail-inbox.html">Email</a></li>
@@ -67,6 +69,8 @@
                     <li><a href="widgets-data.html">Data Widgets</a></li>
                 </ul>
             </li>
+
+            <li class="open"><a href="{{ route('logout') }}"><i class="zmdi zmdi-input-power"></i><span>Logout</span></a></li>
         </ul>
     </div>
 </aside>

@@ -19,7 +19,7 @@
 >>> TABLE OF CONTENTS:
 ===============================================================
 # Google fonts
-# Gutter Code 
+# Gutter Code
 # Normalize
 # Typography
 # Custom Class
@@ -38,7 +38,7 @@
 # Galleries
 # Unit test
 # ScrollUp
-# Owl Carousel 
+# Owl Carousel
 # Slick Slider
 # Background Overlay
 # Scrollbar
@@ -58,7 +58,7 @@ font-family: 'Open Sans', sans-serif;
 font-family: 'Rajdhani', sans-serif;
 */
 /* ====================================================
-    Gutter Code 
+    Gutter Code
 ==================================================== */
 .ltn__no-gutter > [class*='col-'] {
   /* No padding only for child columns */
@@ -97,10 +97,10 @@ font-family: 'Rajdhani', sans-serif;
   /* Darken */
   --ltn__primary-color-3: #133236;
   /* Lighten */
-  --ltn__secondary-color: #e53e29;
-  --ltn__secondary-color-2: #cb3421;
+  --ltn__secondary-color: #e6c233;
+  --ltn__secondary-color-2: #e7c22b;
   /* Darken */
-  --ltn__secondary-color-3: #fb412a;
+  --ltn__secondary-color-3: #FED638;
   /* Lighten */
   --ltn__heading-color: #071c1f;
   --ltn__paragraph-color: #071c1f;
@@ -1067,7 +1067,7 @@ ul {
     color: var(--white); }
 
 /* ----------------------------------------------------
-    Owl Carousel 
+    Owl Carousel
 ---------------------------------------------------- */
 .owl-dots {
   display: block;
@@ -6763,7 +6763,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 # Common CSS
 # Section title
 # Category Area
-# Feature Area 
+# Feature Area
 # Countdown Area
 # Blog Area
 # Blog Details
@@ -6792,12 +6792,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 # Service Area
 # Call To Action
 # Elements Area
-# Service Form 
+# Service Form
 # Get A Quote Form
 # Car Dealer Form
 # Video Area
 # Brand Logo
-# Progress Bar 
+# Progress Bar
 # Our Journey Area
 # Google Map Locations Area
 # Team Details
@@ -7098,7 +7098,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   color: var(--ltn__secondary-color); }
 
 /* ----------------------------------------------------
-    Feature Area 
+    Feature Area
 ---------------------------------------------------- */
 .ltn__feature-item {
   padding: 40px 25px 10px;
@@ -10181,7 +10181,7 @@ input.cart-plus-minus-box {
   margin: 0; }
 
 /* ----------------------------------------------------
-    Service Form 
+    Service Form
 ---------------------------------------------------- */
 .ltn__service-form-box {
   margin: 0;
@@ -10504,7 +10504,7 @@ input.cart-plus-minus-box {
       transform: scale(1.1); }
 
 /* ----------------------------------------------------
-    Progress Bar 
+    Progress Bar
 ---------------------------------------------------- */
 .ltn__progress-bar-wrap {
   margin-bottom: 50px; }

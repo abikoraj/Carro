@@ -2,6 +2,9 @@
 
 @section('content')
 
+@php
+    $item = App\Models\About::first();
+@endphp
 <section class="content">
     <div class="body_scroll">
         <div class="block-header">
@@ -27,23 +30,26 @@
         <div class="container-fluid">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="alert alert-warning" role="alert">
-                        <strong>Bootstrap</strong> Better check yourself, <a target="_blank" href="https://getbootstrap.com/docs/4.2/components/forms/">View More</a>
+                    @if (session()->has('message'))
+                    <div class="alert alert-success" role="alert">
+                        {{ session()->get('message') }}
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
                         </button>
                     </div>
+                    @endif
                     <div class="card">
                         <div class="header">
                             <h2>Edit<strong> About</strong></h2>
                         </div>
-                        <form action="" method="post">
+                        <form action="{{ route('about.edit',['about'=>$item->id]) }}" method="post">
+                            @csrf
                             <div class="body">
                                 <div class="row clearfix">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">Title</label>
-                                            <input type="text" name="title" class="form-control" placeholder="Enter Title">
+                                            <input type="text" name="title" class="form-control" placeholder="Enter Title" value="{{ $item->title }}">
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +57,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">Sub-Title</label>
-                                            <input type="text" class="form-control" name="subtitle" maxlength="100" placeholder="Enter Sub-Title">
+                                            <input type="text" class="form-control" name="subtitle" maxlength="100" placeholder="Enter Sub-Title" value="{{ $item->subtitle }}">
                                         </div>
                                     </div>
                                 </div>
@@ -59,25 +65,25 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="">Feature 1</label>
-                                            <input type="text" name="feature1" class="form-control" placeholder="Enter Feature-1">
+                                            <input type="text" name="feature1" class="form-control" placeholder="Enter Feature-1" value="{{ $item->feature1 }}">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="">Feature 2</label>
-                                            <input type="text" name="feature2" class="form-control" placeholder="Enter Feature-2">
+                                            <input type="text" name="feature2" class="form-control" placeholder="Enter Feature-2" value="{{ $item->feature2 }}">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="">Feature 3</label>
-                                            <input type="text" name="feature3" class="form-control" placeholder="Enter Feature-3">
+                                            <input type="text" name="feature3" class="form-control" placeholder="Enter Feature-3" value="{{ $item->feature3 }}">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="">Feature 4</label>
-                                            <input type="text" name="feature4" class="form-control" placeholder="Enter Feature-4">
+                                            <input type="text" name="feature4" class="form-control" placeholder="Enter Feature-4" value="{{ $item->feature4 }}">
                                         </div>
                                     </div>
                                 </div>
@@ -85,7 +91,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label for="">Description</label>
-                                            <textarea rows="4" class="form-control no-resize" name="description" maxlength="335" placeholder="Enter Description"></textarea>
+                                            <textarea rows="4" class="form-control no-resize" name="description" maxlength="335" placeholder="Enter Description">{{ $item->description }}"</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -101,8 +107,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 </section>

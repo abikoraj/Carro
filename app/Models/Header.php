@@ -9,7 +9,7 @@ class Header extends Model
 {
     use HasFactory;
 
-    public $fillable = [
+    protected $fillable = [
         'logo',
         'address',
         'phone',
