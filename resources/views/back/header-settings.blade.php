@@ -13,10 +13,10 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2>Header Settings</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Aero</a>
+                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Dashboard</a>
                         </li>
                         {{-- <li class="breadcrumb-item"><a href="javascript:void(0);">Forms</a></li> --}}
-                        <li class="breadcrumb-item active">Advanced Form</li>
+                        <li class="breadcrumb-item active">Header Settings</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i
                             class="zmdi zmdi-sort-amount-desc"></i></button>

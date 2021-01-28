@@ -16,7 +16,7 @@
 
 @include('portfolio.app')
 
-@include('sections.freeService')
+@include('Offer.app')
 
 @include('sections.brands')
 

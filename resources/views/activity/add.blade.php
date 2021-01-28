@@ -13,7 +13,7 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2>Activity</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Aero</a>
+                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Header Settings</a>
                         </li>
                         <li class="breadcrumb-item active">Activity</li>
                     </ul>

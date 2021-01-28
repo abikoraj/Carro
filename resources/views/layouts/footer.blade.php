@@ -8,13 +8,9 @@
                         <h6 class="ltn__secondary-color text-uppercase">// time shedule</h6>
                         <h4 class="footer-title">Operating Hours.</h4>
                         <ul>
-                            <li>Monday <span>07:00AM - 20:00PM</span></li>
-                            <li>Tuesday <span>07:00AM - 20:00PM</span></li>
-                            <li>Wednesday <span>07:00AM - 20:00PM</span></li>
-                            <li>Thursday <span>07:00AM - 20:00PM</span></li>
-                            <li>Friday <span>07:00AM - 20:00PM</span></li>
-                            <li>Saturday <span>07:00AM - 20:00PM</span></li>
-                            <li>Sunday <span>Official Holiday</span></li>
+                            @foreach (App\Models\Footer::take(7)->get() as $item)
+                            <li>{{ $item->day }} <span>{{ $item->time }}</span></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -23,20 +19,9 @@
                         <h4 class="footer-title">Services.</h4>
                         <div class="footer-menu">
                             <ul>
-                                <li><a href="service.html">Engine Diagnostics</a></li>
-                                <li><a href="service.html">Vehicles Damaged</a></li>
-                                <li><a href="service.html">Air Conditioning Evac</a></li>
-                                <li><a href="service.html">Anti Lock Brake Service</a></li>
-                                <li><a href="service.html">Computer Diagnostics</a></li>
-                                <li><a href="service.html">Performance Upgrades</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-menu">
-                            <ul>
-                                <li><a href="service.html">Car Wash & Cleaning</a></li>
-                                <li><a href="service.html">Choose your Repairs</a></li>
-                                <li><a href="service.html">Free Consultancy</a></li>
-                                <li><a href="service.html">Emergency Time</a></li>
+                                @foreach (App\Models\Service::all() as $item)
+                                <li><a href="{{ route('service') }}">{{ $item->title }}</a></li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>

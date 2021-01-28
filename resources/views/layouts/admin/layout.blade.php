@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
-<title>:: Aero Bootstrap4 Admin :: Home</title>
+<title>Admin Panel</title>
 <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon"> <!-- Favicon-->
 <link rel="stylesheet" href="{{ asset('assets/backend/plugins/bootstrap/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/backend/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') }}"/>
@@ -32,7 +32,7 @@
 <!-- Page Loader -->
 <div class="page-loader-wrapper">
     <div class="loader">
-        <div class="m-t-30"><img class="zmdi-hc-spin" src="{{ asset('assets/backend/images/loader.svg') }}" width="48" height="48" alt="Aero"></div>
+        <div class="m-t-30"><img class="zmdi-hc-spin" src="{{ asset('assets/backend/images/loader.svg') }}" width="48" height="48" alt="Admin"></div>
         <p>Please wait...</p>
     </div>
 </div>

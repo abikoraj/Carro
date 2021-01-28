@@ -9,7 +9,7 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2>Services</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Aero</a>
+                        <li class="breadcrumb-item"><a href="index.html"><i class="zmdi zmdi-home"></i> Dashboard</a>
                         </li>
                         <li class="breadcrumb-item active">Services</li>
                     </ul>
@@ -28,7 +28,7 @@
                 <div class=" col-md-12 justify-content-center">
                     <div class="card">
                         <div class="header">
-                            <h2>Add<strong> Services</strong></h2>
+                            <h2>Edit<strong> Services</strong></h2>
                         </div>
                         <div class="body clearfix shadow-sm">
                             <form action="{{ route('services.edit',['service'=>$item->id]) }}" method="POST" enctype="multipart/form-data">

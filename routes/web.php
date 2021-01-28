@@ -3,7 +3,9 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\FooterController;
 use App\Http\Controllers\HeaderController;
+use App\Http\Controllers\OfferController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SkillController;
@@ -99,6 +101,16 @@ Route::group(['middleware' => ['auth']], function () {
         Route::prefix('skills')->group(function(){
             Route::get('/',[SkillController::class,'add'])->name('skills.add');
             Route::post('/edit/{skill}',[SkillController::class,'edit'])->name('skills.edit');
+        });
+
+        Route::prefix('offer')->group(function(){
+            Route::get('/',[OfferController::class,'add'])->name('offer.add');
+            Route::post('/edit/{offer}',[OfferController::class,'edit'])->name('offer.edit');
+        });
+
+        Route::prefix('footer-setting')->group(function(){
+            Route::get('/',[FooterController::class,'add'])->name('footer.add');
+            Route::post('/edit/{footer}',[FooterController::class,'edit'])->name('footer.edit');
         });
 
     });
