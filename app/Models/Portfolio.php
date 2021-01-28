@@ -9,7 +9,7 @@ class Portfolio extends Model
 {
     use HasFactory;
 
-    public function tag()
+    public function tags()
     {
         return $this->belongsTo(Tag::class);
     }

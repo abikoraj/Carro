@@ -1,7 +1,11 @@
 @extends('layouts.app')
 @section('page-title','Contact')
+@section('header', 'Contact Us')
 
 @section('content')
+@php
+    $item = App\Models\Header::first();
+@endphp
 <!-- CONTACT ADDRESS AREA START -->
 <div class="ltn__contact-address-area mb-90">
     <div class="container">
@@ -9,30 +13,30 @@
             <div class="col-lg-4">
                 <div class="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
                     <div class="ltn__contact-address-icon">
-                        <img src="assets/img/icons/10.png" alt="Icon Image">
+                        <img src="{{ asset('assets/img/icons/10.png') }}" alt="Icon Image">
                     </div>
                     <h3>Email Address</h3>
-                    <p>info@webmail.com <br>
-                        jobs@webexample.com</p>
+                    <p>{{ $item->email }} <br>
+                        {{ $item->email2 }}</p>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
                     <div class="ltn__contact-address-icon">
-                        <img src="assets/img/icons/11.png" alt="Icon Image">
+                        <img src="{{ asset('assets/img/icons/11.png') }}" alt="Icon Image">
                     </div>
                     <h3>Phone Number</h3>
-                    <p>+0123-456789 <br> +987-6543210</p>
+                    <p>{{ $item->phone }} <br> {{ $item->phone2 }}</p>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="ltn__contact-address-item ltn__contact-address-item-3 box-shadow">
                     <div class="ltn__contact-address-icon">
-                        <img src="assets/img/icons/12.png" alt="Icon Image">
+                        <img src="{{ asset('assets/img/icons/12.png') }}" alt="Icon Image">
                     </div>
                     <h3>Office Address</h3>
-                    <p>18/A, New Born Town Hall <br>
-                        New York, US</p>
+                    <p>{{ $item->address }} <br>
+                        {{ $item->address2 }}</p>
                 </div>
             </div>
         </div>

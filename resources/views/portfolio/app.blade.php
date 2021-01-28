@@ -10,50 +10,15 @@
             </div>
         </div>
         <div class="row ltn__image-slider-3-active slick-arrow-1 slick-arrow-1-inner">
+            @foreach (App\Models\Portfolio::take(6)->latest()->get() as $item)
             <div class="col-lg-12">
                 <div class="ltn__img-slide-item-3 mb-0">
-                    <a href="assets/img/img-slide/11.jpg" data-rel="lightcase:myCollection">
-                        <img src="assets/img/img-slide/11.jpg" alt="Image">
-                    </a>
-                    {{-- <div class="ltn__img-slide-info">
-                        <div class="ltn__img-slide-info-brief">
-                            <h6>//  trouble shooting</h6>
-                            <h1><a href="portfolio-details.html">Hilix Nova Car Solutions.</a></h1>
-                        </div>
-                        <div class="btn-wrapper">
-                            <a href="portfolio-details.html" class="btn theme-btn-1 btn-effect-1"><i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div> --}}
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="ltn__img-slide-item-3 mb-0">
-                    <a href="assets/img/img-slide/12.jpg" data-rel="lightcase:myCollection">
-                        <img src="assets/img/img-slide/12.jpg" alt="Image">
+                    <a href="{{ $item->image }}" data-rel="lightcase:myCollection">
+                        <img src="{{ $item->image }}" alt="Image">
                     </a>
                 </div>
             </div>
-            <div class="col-lg-12">
-                <div class="ltn__img-slide-item-3 mb-0">
-                    <a href="assets/img/img-slide/13.jpg" data-rel="lightcase:myCollection">
-                        <img src="assets/img/img-slide/13.jpg" alt="Image">
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="ltn__img-slide-item-3 mb-0">
-                    <a href="assets/img/img-slide/11.jpg" data-rel="lightcase:myCollection">
-                        <img src="assets/img/img-slide/11.jpg" alt="Image">
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="ltn__img-slide-item-3 mb-0">
-                    <a href="assets/img/img-slide/13.jpg" data-rel="lightcase:myCollection">
-                        <img src="assets/img/img-slide/13.jpg" alt="Image">
-                    </a>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="btn-wrapper offset-md-5">
             <a href="{{ route('portfolio') }}" class="btn theme-btn-3 btn-effect-4 text-uppercase mt-4 mb-4">Load More  <i class="fas fa-arrow-right"></i></a>

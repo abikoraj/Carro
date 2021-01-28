@@ -42,11 +42,11 @@
                             <form action="{{ route('services.submit') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-5">
                                         <label for="title">Image</label>
-                                        <input type="file" name="image" class="dropify" required>
+                                        <input type="file" name="image" class="dropify" required data-default-file="{{ asset('assets/img/blog/author.jpg') }}">
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-7">
                                         <div class="form-group">
                                             <label for="title">Features</label>
                                             <input type="text" name="feature1" class="form-control" placeholder="Feature-1" required>
@@ -61,13 +61,13 @@
                                             <input type="text" name="feature4" class="form-control" placeholder="Feature-4" required>
                                         </div>
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-5">
                                         <label for="title">Title</label>
                                         <input type="text" name="title" class="form-control" placeholder="Enter Title" required>
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-7">
                                         <label for="title">Sub-Title</label>
-                                        <input type="text" name="subtitle" class="form-control" placeholder="Enter Sub-Title" required>
+                                        <input type="text" name="subtitle" class="form-control" placeholder="Enter Sub-Title" required maxlength="52">
                                     </div>
                                     <div class="form-group col-md-12">
                                         <button type="submit" class="btn btn-primary waves-blue btn-lg float-right">Upload</button>

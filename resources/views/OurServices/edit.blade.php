@@ -59,7 +59,7 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="title">Sub-Title</label>
-                                        <input type="text" name="subtitle" class="form-control" placeholder="Enter Sub-Title" required value="{{ $item->subtitle }}">
+                                        <input type="text" name="subtitle" class="form-control" placeholder="Enter Sub-Title" required value="{{ $item->subtitle }}" maxlength="52">
                                     </div>
                                     <div class="form-group col-md-12">
                                         <button type="submit" class="btn btn-primary waves-blue btn-lg float-right">Upload</button>

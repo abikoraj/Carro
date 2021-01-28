@@ -18,7 +18,11 @@ class AboutController extends Controller
 
     public function edit(About $about, Request $request)
     {
+        if ($request->hasFile('image')) {
+            $about->image = $request->image->store('data/about-pic','public');
+        }
         $about->title = $request->title;
+        $about->experience = $request->experience;
         $about->subtitle = $request->subtitle;
         $about->feature1 = $request->feature1;
         $about->feature2 = $request->feature2;

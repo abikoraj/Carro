@@ -46,6 +46,35 @@
 @yield('content')
 
 
+{{-- <script>
+    document.getElementById('myCheck').onclick = function() {
+        // var video = getElementById('name2');
+        // var check = getElementById('check_box');
+        // var input = document.querySelectorAll('#btn1, #link1, #btn2, #link2');
+        if (this.checked==true)
+        {
+            video.disabled = false;
+            // document.querySelectorAll('#btn1, #link1, #btn2, #link2').disabled=true;
+            // input.disabled = false;
+            document.getElementById('name2').disabled=false;
+            document.getElementById('btn1').disabled=true;
+            document.getElementById('link1').disabled=true;
+            document.getElementById('btn2').disabled=true;
+            document.getElementById('link2').disabled=true;
+        }else
+        {
+            // video.disabled = true;
+            // input.disabled = true;
+            document.getElementById('name2').disabled=true;
+            document.getElementById('btn1').disabled=false;
+            document.getElementById('link1').disabled=false;
+            document.getElementById('btn2').disabled=false;
+            document.getElementById('link2').disabled=false;
+        }
+    }
+</script> --}}
+
+
 <!-- Jquery Core Js -->
 <script src="{{ asset('assets/backend/bundles/libscripts.bundle.js') }}"></script> <!-- Lib Scripts Plugin Js ( jquery.v3.2.1, Bootstrap4 js) -->
 <script src="{{ asset('assets/backend/bundles/vendorscripts.bundle.js') }}"></script> <!-- slimscroll, waves Scripts Plugin Js -->
@@ -62,7 +91,7 @@
 
 <script src="{{ asset('assets/backend/plugins/multi-select/js/jquery.multi-select.js') }}"></script> <!-- Multi Select Plugin Js -->
 <script src="{{ asset('assets/backend/plugins/select2/select2.min.js') }}"></script> <!-- Select2 Js -->
-
+@yield('scripts')
 </body>
 
 

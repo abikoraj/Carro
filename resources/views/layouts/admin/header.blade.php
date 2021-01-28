@@ -10,8 +10,8 @@
                 <div class="user-info">
                     <a class="image" href="profile.html"><img src="{{ asset('assets/backend/images/profile_av.jpg') }}" alt="User"></a>
                     <div class="detail">
-                        <h4>Michael</h4>
-                        <small>Super Admin</small>
+                        <h4>{{ Auth::user()->name }}</h4>
+                        <small>{{ Auth::user()->email }}</small>
                     </div>
                 </div>
             </li>
@@ -19,19 +19,20 @@
             <li><a href="{{ route('slider.add') }}"><i class="zmdi zmdi-view-carousel"></i><span>Slider</span></a></li>
             <li class="open"><a href="{{ route('about.add') }}"><i class="zmdi zmdi-nature-people"></i><span>About</span></a></li>
             <li class="open"><a href="{{ route('portfolio.add') }}"><i class="zmdi zmdi-collection-image-o"></i><span>Portfolio</span></a></li>
-            <li class="open"><a href="{{ route('brands.add') }}"><i class="zmdi zmdi-accounts-list"></i><span>Brands</span></a></li>
+            {{-- <li class="open"><a href="{{ route('brands.add') }}"><i class="zmdi zmdi-accounts-list"></i><span>Brands</span></a></li> --}}
             <li class="open"><a href="{{ route('header.settings') }}"><i class="zmdi zmdi-settings-square"></i><span>Header Settings</span></a></li>
-            <li class="open"><a href="{{ route('testimonial.add') }}"><i class="zmdi zmdi-comment-alt-text"></i><span>Testimonials</span></a></li>
+            {{-- <li class="open"><a href="{{ route('testimonial.add') }}"><i class="zmdi zmdi-comment-alt-text"></i><span>Testimonials</span></a></li> --}}
             <li class="open"><a href="{{ route('services.add') }}"><i class="zmdi zmdi-group-work"></i><span>Services</span></a></li>
-            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>App</span></a>
+            {{-- <li class="open"><a href="{{ route('activity.add') }}"><i class="zmdi zmdi-google-pages"></i><span>Activity</span></a></li> --}}
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>Sections</span></a>
                 <ul class="ml-menu">
-                    <li><a href="mail-inbox.html">Email</a></li>
-                    <li><a href="chat.html">Chat Apps</a></li>
-                    <li><a href="events.html">Calendar</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="{{ route('activity.add') }}">Activity</a></li>
+                    <li><a href="{{ route('brands.add') }}">Brands</a></li>
+                    <li><a href="{{ route('testimonial.add') }}">Testimonials</a></li>
+                    <li><a href="{{ route('skills.add') }}">Skills</a></li>
                 </ul>
             </li>
-            <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Projects</span></a>
+            {{-- <li> <a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-assignment"></i><span>Projects</span></a>
                 <ul class="ml-menu">
                     <li><a href="project-list.html">Projects List</a></li>
                     <li><a href="taskboard.html">Taskboard</a></li>
@@ -68,9 +69,9 @@
                     <li><a href="widgets-app.html">Apps Widgets</a></li>
                     <li><a href="widgets-data.html">Data Widgets</a></li>
                 </ul>
-            </li>
+            </li> --}}
 
-            <li class="open"><a href="{{ route('logout') }}"><i class="zmdi zmdi-input-power"></i><span>Logout</span></a></li>
+            <li class="open"><a href="{{ route('logout') }}"><i class="zmdi zmdi-power"></i><span>Logout</span></a></li>
         </ul>
     </div>
 </aside>

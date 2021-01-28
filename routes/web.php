@@ -1,10 +1,12 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\HeaderController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SkillController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\UserAuthController;
@@ -45,6 +47,9 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::prefix('slider')->group(function(){
             Route::get('/',[SliderController::class,'add'])->name('slider.add');
+            Route::post('/submit',[SliderController::class,'submit'])->name('slider.submit');
+            Route::match(['get', 'post'], '/edit/{slider}', [SliderController::class, 'edit'])->name('slider.edit');
+            Route::get('/delete/{slider}',[SliderController::class,'delete'])->name('slider.delete');
         });
 
         Route::prefix('header-settings')->group(function(){
@@ -84,6 +89,16 @@ Route::group(['middleware' => ['auth']], function () {
             Route::get('/',[BrandController::class,'add'])->name('brands.add');
             Route::post('/submit',[BrandController::class,'submit'])->name('brands.submit');
             Route::get('/delete/{brand}',[BrandController::class,'delete'])->name('brands.delete');
+        });
+
+        Route::prefix('activity')->group(function(){
+            Route::get('/',[ActivityController::class,'add'])->name('activity.add');
+            Route::post('/edit/{activity}',[ActivityController::class,'edit'])->name('activity.edit');
+        });
+
+        Route::prefix('skills')->group(function(){
+            Route::get('/',[SkillController::class,'add'])->name('skills.add');
+            Route::post('/edit/{skill}',[SkillController::class,'edit'])->name('skills.edit');
         });
 
     });

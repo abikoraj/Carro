@@ -18,6 +18,13 @@ class CreateSlidersTable extends Migration
             $table->text('image');
             $table->text('title');
             $table->text('subtitle');
+            $table->text('description')->nullable();
+            $table->text('btn_text1')->nullable();
+            $table->text('btn_text2')->nullable();
+            $table->text('btn_link1')->nullable();
+            $table->text('btn_link2')->nullable();
+            $table->boolean('has_video')->nullable();
+            $table->text('video_link')->nullable();
             $table->timestamps();
         });
     }

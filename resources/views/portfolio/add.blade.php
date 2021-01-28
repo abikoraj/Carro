@@ -73,7 +73,7 @@
                             <form action="{{ route('portfolio.submit') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
-                                    <input type="file" name="image" class="dropify">
+                                    <input type="file" name="image" class="dropify" required data-default-file="{{ asset('assets/img/img-slide/11.jpg') }}">
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-9 col-md-9 col-sm-9">
@@ -113,7 +113,7 @@
                             </div>
                             <div class="image">
                                 <img src="{{ asset($item->image) }}" alt="img" class="img-fluid">
-                                {{-- <p class="m-b-5 text-muted text-center">img21545ds.jpg</p> --}}
+                                {{-- <p class="m-b-5 text-muted text-center">{{ $item->tag }}</p> --}}
                             </div>
                             {{-- <div class="file-name">
                                 <p class="m-b-5 text-muted">img21545ds.jpg</p>

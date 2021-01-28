@@ -32,20 +32,20 @@
                             <div class="body row">
                                 <div class="form-group col-md-3">
                                     <label for="image">Image</label>
-                                    <input type="file" name="image" class="dropify" data-default-file="{{ asset($item->image) }}">
+                                    <input type="file" name="image" class="dropify" data-default-file="{{ asset($item->image) }}" value="{{ asset($item->image) }}">
                                 </div>
                                 <div class="col-md-9 row">
                                     <div class="col-md-6">
                                         <label for="title">Name</label>
-                                        <input type="text" name="name" class="form-control form-control-lg" placeholder="Enter Name" value="{{ $item->name }}">
+                                        <input type="text" name="name" class="form-control form-control-lg" placeholder="Enter Name" value="{{ $item->name }}" required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="subtitle">Designation</label>
-                                        <input type="text" name="designation" class="form-control form-control-lg" placeholder="Enter Designation" value="{{ $item->designation }}">
+                                        <input type="text" name="designation" class="form-control form-control-lg" placeholder="Enter Designation" value="{{ $item->designation }}" required>
                                     </div>
                                     <div class="col-md-12">
                                         <label for="subtitle">Message</label>
-                                        <textarea class="form-control no-resize" name="message" rows="2" maxlength="125" placeholder="Enter Message">{{ $item->message }}</textarea>
+                                        <textarea class="form-control no-resize" name="message" rows="2" maxlength="125" placeholder="Enter Message" required>{{ $item->message }}</textarea>
                                     </div>
                                     <div class="col-md-12">
                                         <button type="submit" class="btn btn-primary waves-blue btn-lg float-right">Update</button>

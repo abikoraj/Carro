@@ -10,7 +10,7 @@
 
 @include('OurServices.app')
 
-@include('sections.counter')
+@include('activity.app')
 
 {{-- @include('sections.teams') --}}
 
@@ -20,7 +20,7 @@
 
 @include('sections.brands')
 
-@include('sections.testimonials')
+@include('testimonial.app')
 
 
 @endsection

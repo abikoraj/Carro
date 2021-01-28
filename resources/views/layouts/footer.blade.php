@@ -6,7 +6,7 @@
                 <div class="col-xl-4 col-md-5">
                     <div class="footer-widget ltn__footer-timeline-widget ltn__footer-timeline-widget-1">
                         <h6 class="ltn__secondary-color text-uppercase">// time shedule</h6>
-                        <h4 class="footer-title">Meet In Timeline.</h4>
+                        <h4 class="footer-title">Operating Hours.</h4>
                         <ul>
                             <li>Monday <span>07:00AM - 20:00PM</span></li>
                             <li>Tuesday <span>07:00AM - 20:00PM</span></li>

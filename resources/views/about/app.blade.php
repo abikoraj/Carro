@@ -26,26 +26,18 @@
                 </div>
             </div>
             <div class="col-lg-5 align-self-center">
-                <div class="get-a-quote-wrap">
-                    <h2>Get A Quote</h2>
-                    <form action="#" class="get-a-quote-form">
-                        <div class="input-item input-item-name ltn__custom-icon">
-                            <input type="text" placeholder="Enter your name">
+                <div class="about-us-img-wrap about-img-left">
+                    {{-- @if ($item->image == NULL)
+                    <img src="{{ asset('assets/img/team/4.jpg') }}" alt="About Us Image">
+                    @endif --}}
+                    <img src="{{ asset($item->image) }}">
+                    <div class="about-us-img-info about-us-img-info-2">
+                        <div class="about-us-img-info-inner">
+                            <h1>{{ $item->experience }}<span>+</span></h1>
+                            <h6>Years Experience</h6>
+                            <!-- <span class="dots-bottom"></span> -->
                         </div>
-                        <div class="input-item input-item-email ltn__custom-icon">
-                            <input type="email" placeholder="Enter your email">
-                        </div>
-                        <div class="input-item">
-                            <select class="nice-select">
-                                <option>Select Car Type</option>
-                                <option>New Car</option>
-                                <option>Used Car</option>
-                            </select>
-                        </div>
-                        <div class="btn-wrapper mt-0">
-                            <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">get an appointment</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

@@ -16,9 +16,13 @@ class CreateHeadersTable extends Migration
         Schema::create('headers', function (Blueprint $table) {
             $table->id();
             $table->text('logo');
+            $table->text('header_img')->nullable();
             $table->text('address');
+            $table->text('address2')->nullable();
             $table->text('phone');
+            $table->text('phone2')->nullable();
             $table->text('email');
+            $table->text('email2')->nullable();
             $table->text('facebook');
             $table->text('twitter');
             $table->text('instagram');
