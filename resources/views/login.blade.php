@@ -10,7 +10,7 @@
 
 <title>Admin Login</title>
 <!-- Favicon-->
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="{{ asset('assets/backend/images/wd.png') }}" type="image/x-icon">
 <!-- Custom Css -->
 <link rel="stylesheet" href="{{ asset('assets/backend/plugins/bootstrap/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/backend/css/style.min.css') }}">
@@ -30,7 +30,7 @@
                         </div>
                     @endif
                     <div class="header">
-                        <img class="logo" src="{{ asset('assets/backend/images/logo.svg') }}" alt="">
+                        <img class="logo" src="{{ asset('assets/backend/images/wd.png') }}" alt="">
                         <h5>Log in</h5>
                     </div>
                     <div class="body">
@@ -53,19 +53,13 @@
                         <div class="input-group mb-3">
                             <button type="submit" class="btn btn-primary btn-block waves-effect waves-light">SIGN IN</button>
                         </div>
-                        {{-- <div class="signin_with mt-3">
-                            <p class="mb-0">or Sign Up using</p>
-                            <button class="btn btn-primary btn-icon btn-icon-mini btn-round facebook"><i class="zmdi zmdi-facebook"></i></button>
-                            <button class="btn btn-primary btn-icon btn-icon-mini btn-round twitter"><i class="zmdi zmdi-twitter"></i></button>
-                            <button class="btn btn-primary btn-icon btn-icon-mini btn-round google"><i class="zmdi zmdi-google-plus"></i></button>
-                        </div> --}}
                     </div>
                 </form>
-                <div class="copyright text-center">
+                {{-- <div class="copyright text-center">
                     &copy;
                     <script>document.write(new Date().getFullYear())</script>,
                     <span><a href="https://needtechnosoft.com.np/">Need Technosoft</a></span>
-                </div>
+                </div> --}}
             </div>
             <div class="col-lg-8 col-sm-12">
                 <div class="card">

@@ -81,8 +81,8 @@
                     <div class="ltn__copyright-menu text-right">
                         <ul>
                             <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Claim</a></li>
-                            <li><a href="#">Privacy & Policy</a></li>
+                            <li><a href="{{ route('faq') }}">FAQs</a></li>
+                            <li><a href="{{ route('policy') }}">Privacy & Policy</a></li>
                         </ul>
                     </div>
                 </div>

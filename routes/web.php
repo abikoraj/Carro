@@ -2,10 +2,13 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\AppointController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\FooterController;
 use App\Http\Controllers\HeaderController;
 use App\Http\Controllers\OfferController;
+use App\Http\Controllers\PolicyController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SkillController;
@@ -37,6 +40,8 @@ Route::group(['middleware' => 'commingsoon'], function () {
     Route::get('/service',[ServiceController::class,'index'])->name('service');
     Route::get('/about',[AboutController::class,'index'])->name('about');
     Route::get('/portfolio',[PortfolioController::class,'index'])->name('portfolio');
+    Route::get('/privacy-policy',[PolicyController::class,'index'])->name('policy');
+    Route::get('/faq',[FaqController::class,'index'])->name('faq');
     Route::view('/appointment', 'contact.appointment')->name('appointment');
 });
 
@@ -111,6 +116,36 @@ Route::group(['middleware' => ['auth']], function () {
         Route::prefix('footer-setting')->group(function(){
             Route::get('/',[FooterController::class,'add'])->name('footer.add');
             Route::post('/edit/{footer}',[FooterController::class,'edit'])->name('footer.edit');
+        });
+
+        Route::prefix('appoint')->group(function(){
+            Route::get('/',[AppointController::class,'add'])->name('appoint.add');
+            Route::post('/submit',[AppointController::class,'submit'])->name('appoint.submit');
+
+            Route::post('/carbrand',[AppointController::class,'carbrand'])->name('carbrand.submit');
+            Route::get('/carbrand/delete/{carbrand}',[AppointController::class,'cardel'])->name('carbrand.delete');
+
+            Route::post('/bodystyle',[AppointController::class,'bodystyle'])->name('bodystyle.submit');
+            Route::get('/bodystyle/delete/{bodystyle}',[AppointController::class,'bodydel'])->name('bodystyle.delete');
+
+            Route::post('/location',[AppointController::class,'location'])->name('location.submit');
+            Route::get('/location/delete/{location}',[AppointController::class,'locndel'])->name('location.delete');
+
+            Route::post('/solution',[AppointController::class,'solution'])->name('solution.submit');
+            Route::get('/solution/delete/{solution}',[AppointController::class,'solndel'])->name('solution.delete');
+        });
+
+        Route::prefix('privacy-policy')->group(function(){
+            // Route::view('/pp', 'back.addPrivacyPolicy');
+            Route::get('/',[PolicyController::class,'add'])->name('privacy.policy.show');
+            Route::post('/edit/{privacy}',[PolicyController::class,'edit'])->name('privacy.policy.edit');
+        });
+
+        Route::prefix('faq')->group(function(){
+            Route::get('/',[FaqController::class,'add'])->name('faq.add');
+            Route::post('/submit',[FaqController::class,'submit'])->name('faq.submit');
+            Route::post('/edit/{faq}',[FaqController::class,'edit'])->name('faq.edit');
+            Route::get('/delete/{faq}',[FaqController::class,'delete'])->name('faq.delete');
         });
 
     });

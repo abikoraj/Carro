@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <!-- Responsive css -->
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="{{ asset('assets/plugins/select2/select2.css') }}" />
+    <!-- Multi Select Css -->
+    <link rel="stylesheet" href="{{ asset('assets/plugins/multi-select/css/multi-select.css') }}">
 
 </head>
 
@@ -56,6 +60,11 @@
     <script src="{{ asset('assets/js/plugins.js') }}"></script>
     <!-- Main JS -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    <!-- Select2 Js -->
+    <script src="{{ asset('assets/plugins/select2/select2.min.js') }}"></script>
+    <!-- Multi Select Plugin Js -->
+    <script src="{{ asset('assets/plugins/multi-select/js/jquery.multi-select.js') }}"></script>
+
 
 
     @if(Auth::check())

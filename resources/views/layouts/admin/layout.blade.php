@@ -8,7 +8,7 @@
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
 <title>Admin Panel</title>
-<link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon"> <!-- Favicon-->
+<link rel="icon" href="{{ asset('assets/backend/images/wd.png') }}" type="image/x-icon"> <!-- Favicon-->
 <link rel="stylesheet" href="{{ asset('assets/backend/plugins/bootstrap/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/backend/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css') }}"/>
 <link rel="stylesheet" href="{{ asset('assets/backend/plugins/charts-c3/plugin.css') }}"/>
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="{{ asset('assets/backend/plugins/morrisjs/morris.min.css') }}" />
 <!-- Custom Css -->
 <link rel="stylesheet" href="{{ asset('assets/backend/css/style.min.css') }}">
-
+<link rel="stylesheet" href="{{ asset('assets/backend/plugins/summernote/dist/summernote.css') }}"/>
 <!-- Multi Select Css -->
 <link rel="stylesheet" href="{{ asset('assets/backend/plugins/multi-select/css/multi-select.css') }}">
 <!-- Bootstrap Select Css -->
@@ -85,6 +85,9 @@
 
 <script src="{{ asset('assets/backend/bundles/mainscripts.bundle.js') }}"></script>
 <script src="{{ asset('assets/backend/js/pages/index.js') }}"></script>
+
+<script src="{{ asset('assets/backend/plugins/summernote/dist/summernote.js') }}"></script>
+<script src="{{ asset('assets/backend/js/pages/ticket-page.js') }}"></script>
 
 <script src="{{ asset('assets/backend/plugins/dropify/js/dropify.min.js') }}"></script>
 <script src="{{ asset('assets/backend/js/pages/forms/dropify.js') }}"></script>
